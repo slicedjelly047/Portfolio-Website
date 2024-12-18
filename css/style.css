@@ -1,56 +1,55 @@
 body {
     margin: 0;
-    text-align: center;
     font-family: Verdana, Geneva, Tahoma, serif;
     background-color: rgb(219, 255, 255);
+    color: #333;
+    text-align: center;
 }
 
-/* Top navigation bar */
+/* Top Navigation Bar */
 .top-bar-nav {
-    margin: 0;
     display: flex;
-    justify-content: space-between; /* Align items to left and right */
-    padding-top: 30px;
-    padding-bottom: 10px;
+    align-items: center;
+    justify-content: space-between;
     background-color: aquamarine;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 20px 40px;
 }
 
 .small-photo {
     width: 79px;
+    transition: width 0.3s ease;
 }
 
 .small-photo:hover {
     width: 90px;
-    transition: 0.3s;
 }
 
 .toplink {
     text-decoration: none;
-    margin-left: 20px;
+    margin-left: 30px;
+    color: #333;
+    font-size: 1.2rem;
 }
 
 .toplink:hover {
     color: azure;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 
 hr {
     border-style: none;
-    border-top-style: dotted;
-    border-color: aquamarine;
-    border-width: 10px;
+    border-top: dotted 5px aquamarine;
     width: 10%;
+    margin: 20px auto;
 }
 
-/* Heading Styles */
+/* Headings */
 h1 {
     margin: 0;
     font-family: 'Caveat', cursive;
-    font-size: 69px;
+    font-size: 4rem;
     color: rgb(68, 63, 63);
-    line-height: 1;
+    line-height: 1.2;
 }
 
 h2 {
@@ -58,163 +57,151 @@ h2 {
     font-weight: normal;
     font-style: italic;
     font-size: 1.5rem;
-    line-height: 1;
+    margin-top: 10px;
 }
 
-h3 {
-    font-family: Verdana, Geneva, Tahoma, serif;
-    line-height: 1;
-}
-
-/* Top container */
+/* Top Container */
 .top-container {
     background-color: aquamarine;
     position: relative;
-    padding-top: 90px;
+    padding-top: 120px;
+    padding-bottom: 80px;
 }
 
+.top-cloud, .top-cloud2, .bottom-cloud, .bottom-cloud2 {
+    position: absolute;
+    width: 100px;
+    z-index: -1;
+}
+
+.top-cloud { left: 20px; }
+.top-cloud2 { right: 20px; }
+.bottom-cloud { left: 200px; bottom: 10px; }
+.bottom-cloud2 { right: 200px; bottom: 10px; }
+
+/* Profile Section */
 .profile {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    margin: 80px auto 100px auto;
+    width: 60%;
+    margin: 80px auto 50px auto;
     text-align: left;
-    line-height: 2;
-    padding-bottom: 50px;
+    line-height: 1.8;
 }
 
 .profilepicture {
     width: 40%;
     margin-right: 30px;
-    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 4px solid #ddd;
 }
 
 .skills {
-    padding-top: 20px;
+    margin-top: 50px;
 }
 
 .skill-row {
     display: flex;
     justify-content: space-between;
-    margin: 80px auto;
+    align-items: center;
+    margin: 50px auto;
+    width: 80%;
     text-align: left;
-    line-height: 2;
 }
 
 .skill1, .skill2 {
     width: 45%;
-    margin-bottom: 40px;
 }
 
-/* Clouds */
-.bottom-cloud, .top-cloud, .top-cloud2, .bottom-cloud2 {
-    position: absolute;
-    display: block;
+.skill1 img, .skill2 img {
+    width: 50px;
+    margin-right: 20px;
 }
 
-.bottom-cloud {
-    left: 200px;
-}
-
-.top-cloud {
-    left: 100px;
-}
-
-.top-cloud2 {
-    right: 100px;
-}
-
-.bottom-cloud2 {
-    right: 200px;
+.skill-row h3 {
+    font-size: 1.4rem;
+    margin-bottom: 10px;
 }
 
 /* Contact Section */
 .contact-me {
-    width: 50%;
+    width: 60%;
     margin: 50px auto;
-    line-height: 1.5;
-}
-
-.contattext {
-    padding-top: 40px;
-    margin-bottom: 40px;
-}
-
-/* Bottom Section */
-.bottom-container {
-    background-color: aquamarine;
-    padding-top: 30px;
-    padding-bottom: 50px;
     text-align: center;
 }
 
-.header-contact {
-    font-family: 'Lucida Sans', Geneva, sans-serif;
-    margin: 50px auto;
+button {
+    width: 30%;
+    height: 50px;
+    background-color: rgb(11, 183, 209);
+    color: azure;
+    border: 2px solid rgb(11, 183, 209);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: azure;
+    color: rgb(11, 183, 209);
+}
+
+/* Footer Section */
+.bottom-container {
+    background-color: aquamarine;
+    padding: 30px 0;
 }
 
 .footer-link {
     text-decoration: none;
     margin: 0 20px;
+    color: #333;
+    font-size: 1rem;
 }
 
 .footer-link:hover {
     color: azure;
-    transition: 0.2s;
-}
-
-button {
-    width: 25%;
-    height: 50px;
-    border-width: 2px;
-    background: rgb(11, 183, 209);
-    color: azure;
-    font-size: 20px;
-    cursor: pointer;
-}
-
-button:hover {
-    text-transform: uppercase;
     transition: 0.3s;
 }
 
-/* Responsive Styles */
+footer p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Responsive Design */
 @media screen and (max-width: 768px) {
-    .profilepicture {
-        width: 60%;
-        margin-right: 0;
-        margin-bottom: 20px;
+    .top-container {
+        padding-top: 90px;
+        padding-bottom: 50px;
     }
 
     .profile {
+        width: 80%;
         text-align: center;
+    }
+
+    .profilepicture {
+        width: 50%;
     }
 
     .skill-row {
         flex-direction: column;
         align-items: center;
+        width: 90%;
     }
 
     .skill1, .skill2 {
         width: 80%;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
     }
 
     h1 {
-        font-size: 50px;
+        font-size: 3rem;
     }
 
     h2 {
-        font-size: 1.2rem;
-    }
-
-    .contact-me {
-        width: 80%;
-    }
-
-    .footer-link {
-        margin: 10px;
+        font-size: 1.3rem;
     }
 
     button {
@@ -223,20 +210,21 @@ button:hover {
 }
 
 @media screen and (max-width: 480px) {
+    .profilepicture {
+        width: 60%;
+    }
+
     h1 {
-        font-size: 40px;
+        font-size: 2.5rem;
     }
 
     h2 {
-        font-size: 1rem;
-    }
-
-    .top-link {
-        font-size: 14px;
+        font-size: 1.2rem;
     }
 
     .footer-link {
-        font-size: 14px;
+        font-size: 0.9rem;
+        margin: 0 10px;
     }
 
     button {
